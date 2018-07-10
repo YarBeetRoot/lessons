@@ -33,4 +33,24 @@
     $result = 2+6+2/5-1;
 
     echo "<pre> $result </pre>";
+
+//Task 4
+
+    $a = 1;
+    $b = 2;
+    $c;
+    $d;
+
+    echo "<pre> a = $a , b = $b </pre>";
+
+    $c = $a;
+
+    $d = & $b;
+
+    echo "<pre> c = $c , d = $d </pre>";
+
+    $a = 3;
+    $b = 4;
+
+    echo "<pre> a = $a , b = $b , c = $c , d = $d </pre>";
 ?>
