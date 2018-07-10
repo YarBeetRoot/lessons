@@ -1,4 +1,5 @@
 <?php
+error_reporting(-1);
 //Task 1
 
 // @copyright Lizogub Yaroslav
@@ -53,4 +54,18 @@
     $b = 4;
 
     echo "<pre> a = $a , b = $b , c = $c , d = $d </pre>";
+
+//Task 5
+
+    define("FOO", 41);
+    define("BAR", 33);
+
+    $sum = FOO + BAR;
+
+    echo "<h1> $sum </h1>";
+
+    //BAR = 1;
+    define("BAR", 31);
+    echo "<h2>" . BAR . "</h2>";
+
 ?>
