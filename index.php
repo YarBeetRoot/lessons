@@ -68,4 +68,25 @@ error_reporting(-1);
     define("BAR", 31);
     echo "<h2>" . BAR . "</h2>";
 
+//Task 5
+
+    $a = 152; //integer
+
+    $b = '152'; //string
+
+    $c = 'London'; //string
+
+    $d = array(152); //array
+
+    $e = 15.2; //double || float
+
+    $f = false; //boolean
+
+    $g = true; //boolean
+
+    echo "<p>$a - integer <br> $b - string <br> $c - string <br> $d[0] - element of array <br> $e - double or float <br>  </p>";
+
+    var_dump($f, $g);
+
+
 ?>
