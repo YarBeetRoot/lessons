@@ -7,4 +7,11 @@
 */
 
     echo "hello World";
+
+    $channelName = "jw-tv";
+    $manufacturer_address = "Baker Street 221b";
+    $carColour = "green";
+    $waterDegree = 18;
+    $phone_model = "Nokia 3310";
+
 ?>
