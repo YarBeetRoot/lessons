@@ -68,7 +68,7 @@ error_reporting(-1);
     define("BAR", 31);
     echo "<h2>" . BAR . "</h2>";
 
-//Task 5
+//Task 6
 
     $a = 152; //integer
 
@@ -89,4 +89,13 @@ error_reporting(-1);
     var_dump($f, $g);
 
 
+
+//Task 7
+
+    $presentNum = 5;
+    $studentNum = 10;
+
+    echo "<br>{$presentNum} из {$studentNum}ти студентов посетили лекцию";
+
+    echo '<br>' . $presentNum . ' из ' . $studentNum . 'ти студентов посетили лекцию';
 ?>
