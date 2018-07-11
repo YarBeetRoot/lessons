@@ -131,4 +131,41 @@ error_reporting(-1);
 
     var_dump(count($arr_1), count($arr_2));
 
+
+//Task 10
+
+    define("MIN", 10);
+    define("MAX", 50);
+
+    function checkNum ($x = NULL) {
+
+        if ($x> MIN && $x < MAX) {
+            return "+";
+        }
+
+        if ($x==MIN || $x==MAX) {
+            return "+-";
+        }
+
+        return "-";
+
+    }
+
+
+//    var_dump(checkNum($x=2));
+//    var_dump(checkNum($x=50));
+//    var_dump(checkNum($x=30));
+
+    $result = checkNum(2);
+
+    echo "<br>2 входит в диапозон? Ответ: $result <br>";
+
+    $result = checkNum(50);
+
+    echo "<br>50 входит в диапозон? Ответ: $result <br>";
+
+    $result = checkNum(30);
+
+    echo "<br>30 входит в диапозон? Ответ: $result <br>";
+
 ?>
