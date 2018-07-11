@@ -200,4 +200,6 @@ error_reporting(-1);
     }
 
     var_dump(solveSqrEquation(10, 21, 10));
+
+
 ?>
