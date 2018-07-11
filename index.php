@@ -168,4 +168,36 @@ error_reporting(-1);
 
     echo "<br>30 входит в диапозон? Ответ: $result <br>";
 
+//Task 11
+
+    function solveSqrEquation($a, $b, $c ) {
+
+        $discr = $b**2 - 4*$a*$c;
+
+        $result = "";
+
+        if ($discr > 0) {
+
+            $x_1 = (-$b - sqrt($discr))/(2*$a);
+
+            $x_2 = (-$b + sqrt($discr))/(2*$a);
+
+            $result = "<p>Уравнение имеет 2 корня: x1 = " . round($x_1,1) . ", а х2 = " . round($x_2, 1) . "</p>";
+        }
+
+        if ($discr == 0) {
+
+            $x_1 = (-$b)/(2*$a);
+
+            $result = "<p>Уравнение имеет 1 корень: x1 = {$x_1}</p>";
+        }
+
+        if ($discr < 0) {
+            $result = "Нет корней";
+        }
+
+        return $result;
+    }
+
+    var_dump(solveSqrEquation(10, 21, 10));
 ?>
