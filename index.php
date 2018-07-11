@@ -97,5 +97,20 @@ error_reporting(-1);
 
     echo "<br>{$presentNum} из {$studentNum}ти студентов посетили лекцию";
 
-    echo '<br>' . $presentNum . ' из ' . $studentNum . 'ти студентов посетили лекцию';
+    echo '<br>' . $presentNum . ' из ' . $studentNum . 'ти студентов посетили лекцию<br>';
+
+
+//Task 8
+
+    $str_1 = "Доброе утро";
+    $str_2 = "дамы";
+    $str_3 = "и господа";
+
+    var_dump($str_1, $str_2, $str_3);
+
+    $str_1 .= ' ' . $str_2;
+    $str_1 .= ' ' .  $str_3;
+
+    echo "<p> $str_1 </p>";
+
 ?>
