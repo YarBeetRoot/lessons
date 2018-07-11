@@ -113,4 +113,22 @@ error_reporting(-1);
 
     echo "<p> $str_1 </p>";
 
+
+//Task 9
+
+    $arr_1 = array(0,1,'two',3,4);
+    $arr_2 = [a,b,c,d,e];
+
+    $arr_1['element'] = 'foo';
+
+    unset($arr_2[0]);
+
+    echo "first arrays second element: {$arr_1[2]} <br> second arrays second element: {$arr_2[2]} <br>";
+
+    var_dump($arr_1, $arr_2);
+
+    echo "<br>";
+
+    var_dump(count($arr_1), count($arr_2));
+
 ?>
