@@ -61,12 +61,12 @@ function getCartInfo (array $products = []){
 
 /**
  * функция решает квадратное уравнение
- * @param $a коефициент 1
- * @param $b коефициент 2
- * @param $c коефициент 3
+ * @param int $a коефициент 1
+ * @param int $b коефициент 2
+ * @param int $c коефициент 3
  * @return array|bool|float|int
  */
-function solveSqrEquation($a, $b, $c ) {
+function solveSqrEquation(int $a = 0, int $b = 0, int $c = 0) {
 
     $discr = $b**2 - 4*$a*$c;
 
@@ -92,3 +92,75 @@ function solveSqrEquation($a, $b, $c ) {
 
     return $result;
 }
+
+/*Задача 3: Удаление отрицательных элементов из массива (вариант 1)
+Есть массив с элементами (отрицательными и положительными). Нужно написать такую функцию
+deleteNegtives(), которая будет принимать массив, удалять из него элементы меньше 0 и
+возвращать  этот массив.
+Подсказки:
+Можно использовать цикл foreach для обхода элементов массива.
+Пример:
+// Сейчас $digits содержит отрицательные и положительные числа
+$digits = array(2,­10, ­2, 4, 5, 1, 6, 200, 1.6, 95);
+$digits = deleteNegtives($digits);
+// Теперь $digits содержит только положительные числа*/
+
+$digits = [2, -10, -2, 4, 5, 1, 6, 200, 1.6, 95];
+
+
+/**
+ * Функция удаляет отрицательные числа из массива
+ * @param array $digits
+ * @return array
+ */
+
+function deleteNegatives (array $digits = []) {
+
+    $positiveDigits = [];
+
+    foreach ($digits as $digit) {
+
+        if ($digit > 0) {
+
+            $positiveDigits[] = $digit;
+
+        }
+
+    }
+
+    return $positiveDigits;
+
+}
+
+//$digits = deleteNegatives($digits);
+
+/*Задача 4: Удаление отрицательных элементов из массива (вариант 2)
+Решить задачу №3 используя передачу аргумента по ссылке.
+Пример:
+$digits = array(2,­10, ­2, 4, 5, 1, 6, 200, 1.6, 95);
+// Сейчас $digits содержит отрицательные и положительные числа
+deleteNegtives($digits);
+// Теперь $digits содержит только положительные числа*/
+
+/**
+ * Второй вариант функции удаления отрицательных чисел, с использованием передачи аргумента по ссылке
+ * @param array $digits
+ */
+
+function deleteNegatives_2 (array &$digits = []) {
+
+    foreach ($digits as $i => $digit) {
+
+        if ($digit < 0) {
+
+            unset($digits[$i]);
+
+        }
+
+    }
+
+}
+
+deleteNegatives_2($digits);
+
+var_dump($digits);
