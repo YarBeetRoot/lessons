@@ -9,9 +9,9 @@ require_once ('header.php');
 $testArray = [10,5,2,7,1,11,20];
 
 var_dump($testArray); //увидем наш массив на странице
-
+$start = microtime(true);
 $test = bubbleSort($testArray); //вызовем функцию сортировки и запишем результат в переменную
-
+echo 'Время выполнения скрипта: '.round(microtime(true) - $start, 10).' сек.';
 var_dump($test); //посмотрим на результат))
 
 //пользовательская функция

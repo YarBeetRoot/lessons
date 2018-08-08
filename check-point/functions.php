@@ -32,6 +32,7 @@ function bubbleSortByLink (array &$array2sort, bool $revers = false, callable $c
  * @param callable|NULL $callback
  * @return array|mixed
  */
+
 function bubbleSort (array $array2sort, callable $callback = NULL) {
 
     $result = $array2sort;
